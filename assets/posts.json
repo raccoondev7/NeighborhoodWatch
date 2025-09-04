@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "title": "Getting around the city",
+    "description": "Transit shortcuts and top routes.",
+    "image": "navbar_logo.jpg",
+    "likes": 123,
+    "lat": 52.520008,
+    "lng": 13.404954,
+    "tags": [
+      "transport",
+      "city"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Hidden gems",
+    "description": "Lesser-known cafes and parks.",
+    "image": "logo.jpg",
+    "likes": 98,
+    "lat": 48.137154,
+    "lng": 11.576124,
+    "tags": [
+      "cafes",
+      "parks"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Riverside walk",
+    "description": "A scenic walk route by the river.",
+    "image": "profile.jpg",
+    "likes": 54,
+    "lat": 50.110924,
+    "lng": 8.682127,
+    "tags": [
+      "outdoors"
+    ]
+  }
+]

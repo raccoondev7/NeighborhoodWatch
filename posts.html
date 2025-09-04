@@ -7,9 +7,13 @@
 <link rel="icon" href="assets/images/favicon.ico">
 <title>AroundAbout (Static)</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/app.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js" defer></script>
 
 </head>
 <body>
@@ -17,7 +21,7 @@
 <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/images/logo.jpg" height="44" alt="AroundAbout logo">
+      <img src="assets/images/logo.jpg" class="logonavbar" alt="AroundAbout logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,46 +35,23 @@
   </div>
 </nav>
 
-<main class="page-container">
+<main class="page">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h1 class="h4 m-0">Posts</h1>
-    <form class="d-flex" role="search" onsubmit="return false;">
-      <input class="form-control me-2" type="search" placeholder="Search posts">
-      <button class="btn btn-search">Search</button>
-    </form>
-  </div>
-  <div class="grid">
-    <div class="card post-card shadow-sm">
-      <img src="assets/images/logo.jpg" alt="">
-      <div class="card-body">
-        <h3 class="h6 card-title"><a href="#">Example Post One</a></h3>
-        <p class="card-text small text-muted">Static description. Replace with your content.</p>
-        <div class="d-flex align-items-center gap-2"><img src="assets/images/like.jpeg" height="18" alt=""> <small>123</small></div>
-      </div>
-    </div>
-    <div class="card post-card shadow-sm">
-      <img src="assets/images/navbar_logo.jpg" alt="">
-      <div class="card-body">
-        <h3 class="h6 card-title"><a href="#">Example Post Two</a></h3>
-        <p class="card-text small text-muted">No backend required.</p>
-        <div class="d-flex align-items-center gap-2"><img src="assets/images/like.jpeg" height="18" alt=""> <small>98</small></div>
-      </div>
-    </div>
-    <div class="card post-card shadow-sm">
-      <img src="assets/images/profile.jpg" alt="">
-      <div class="card-body">
-        <h3 class="h6 card-title"><a href="#">Example Post Three</a></h3>
-        <p class="card-text small text-muted">Keep adding cards or migrate content.</p>
-        <div class="d-flex align-items-center gap-2"><img src="assets/images/like.jpeg" height="18" alt=""> <small>54</small></div>
-      </div>
+    <div class="d-flex" role="search">
+      <input id="search" class="form-control me-2" type="search" placeholder="Search posts">
+      <button class="btn btn-brand">Search</button>
     </div>
   </div>
+  <div id="posts-list" class="grid"></div>
+  <div class="empty" id="empty-state" style="display:none;">No results.</div>
+  <p class="note mt-3">Your Likes and Saves persist in localStorage on this device.</p>
 </main>
 
 <div class="footer-nav d-flex justify-content-around">
-  <a href="posts.html" title="Bookmarks (static)"><img src="assets/images/bookmark.jpeg" height="24" alt=""> <span>Bookmarks</span></a>
-  <a href="posts.html" title="Add (placeholder)"><img src="assets/images/add.jpeg" height="24" alt=""> <span>Add</span></a>
-  <a href="profile.html" title="Profile"><img src="assets/images/profile.jpg" height="24" alt=""> <span>Profile</span></a>
+  <a href="posts.html" title="Bookmarks"><img src="assets/images/bookmark.jpeg" height="20" alt=""> <span>Bookmarks</span></a>
+  <a href="posts.html" title="Add"><img src="assets/images/add.jpeg" height="20" alt=""> <span>Add</span></a>
+  <a href="profile.html" title="Profile"><img src="assets/images/profile.jpg" height="20" alt=""> <span>Profile</span></a>
 </div>
 
 </body>
